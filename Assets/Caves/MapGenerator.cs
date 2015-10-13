@@ -40,7 +40,7 @@ public class MapGenerator : MonoBehaviour {
 		ProcessMap();
 
 		// border generation
-		int borderSize = 1;
+		int borderSize = 0;
 		int[,] borderedMap = new int[width+borderSize*2,height+borderSize*2];
 
 		for (int x = 0; x < borderedMap.GetLength(0); x++) {
@@ -48,12 +48,26 @@ public class MapGenerator : MonoBehaviour {
 				if (x >= borderSize && x < width+borderSize &&
 					y >= borderSize && y < height+borderSize) {
 					borderedMap[x,y] = map[x-borderSize,y-borderSize];
+					// reverse! create islands
+					//borderedMap[x,y] = (map[x-borderSize,y-borderSize] == 1)? 0: 1;
 				}
 				else { // inside bordered area
 					borderedMap[x,y] = 1;
 				}
 			}
 		}
+
+		//int clearBorderSize = 3;
+		//for (int x = 0; x < borderedMap.GetLength(0); x++) {
+		//	for (int y = 0; y < borderedMap.GetLength(1); y++) {
+		//		if (x <= clearBorderSize ||
+		//			y <= clearBorderSize ||
+		//			x >= borderedMap.GetLength(0)-clearBorderSize ||
+		//			y >= borderedMap.GetLength(1)-clearBorderSize) {
+		//				borderedMap[x,y] = 0;
+		//		}
+		//	}
+		//}
 
 		MeshGenerator meshGen = GetComponent<MeshGenerator>();
 		//meshGen.ClearLists();
@@ -62,7 +76,7 @@ public class MapGenerator : MonoBehaviour {
 		//meshGen.CreateWallMesh();
 	}
 
-	void ProcessMap() { //
+	void ProcessMap() {
 		List<List<Coord>> wallRegions = GetRegions(1); // get walls
 		int wallThresholdSize = 10; // any region < 20 tiles, remove from map
 
