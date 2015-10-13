@@ -46,6 +46,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraControl.cs" />
+     <Compile Include="Assets\Caves\CameraController.cs" />
+     <Compile Include="Assets\Caves\MapGenerator.cs" />
+     <Compile Include="Assets\Caves\MeshGenerator.cs" />
+     <Compile Include="Assets\Caves\Player2.cs" />
      <Compile Include="Assets\MouseCamera.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\Player.cs" />
