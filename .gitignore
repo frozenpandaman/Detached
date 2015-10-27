@@ -4,7 +4,10 @@
 # Unity generated #
 # =============== #
 Temp/
-Library/
+Library/FailedAssetImports.txt
+Library/cache/
+Library/previews/
+Library/ScriptAssemblies
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -12,12 +15,12 @@ Library/
 ExportedObj/
 obj/
 *.svd
-*.userprefs
 /*.csproj
 *.pidb
 *.suo
 /*.sln
 *.user
+*.userprefs
 *.unityproj
 *.booproj
 
@@ -29,5 +32,7 @@ obj/
 ._*
 .Spotlight-V100
 .Trashes
+*.Trashes
 ehthumbs.db
 Thumbs.db
+*.swp
