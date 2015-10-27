@@ -4,10 +4,12 @@
 # Unity generated #
 # =============== #
 Temp/
+Temp/*
 Library/FailedAssetImports.txt
 Library/cache/
+Library/ShaderCache/
 Library/previews/
-Library/ScriptAssemblies
+Library/ScriptAssemblies/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
