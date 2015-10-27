@@ -650,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1496517701}
   soul: {fileID: 2125243230}
-  ToLevel: 
+  ToLevel: WinScreen
 --- !u!1 &1496517701
 GameObject:
   m_ObjectHideFlags: 0
