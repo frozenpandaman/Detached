@@ -4,8 +4,10 @@ using System.Collections;
 public class ResetPos : MonoBehaviour {
 
 	public GameObject player;
+	public GameObject toDestroy;
 	public Transform soul;
 
+	public int times = 0;
 	private float currentOffset = 0f;
 
 	void Start() {
@@ -18,13 +20,19 @@ public class ResetPos : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject == player) {
+			if (times == 2) {
+				Destroy(this.gameObject);
+				Destroy(toDestroy);
+			}
+			times += 1;
+
 			other.transform.position = new Vector3(0f,0.5f,-20f);
 			UpdateOffset();
+
+			// Make soul/camera farther apart
+			soul.transform.position = new Vector3(currentOffset+5f,0.5f,-20f);
 		}
-		soul.transform.position = new Vector3(currentOffset+5f,0.5f,-20f);
-		// Make soul/camera farther apart
-		// Re-generate terrain (PCG)
-	}
+			}
 
 	//void OnTriggerStay (Collider other) {
 	//}
