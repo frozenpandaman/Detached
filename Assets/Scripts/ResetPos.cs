@@ -5,6 +5,7 @@ public class ResetPos : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject toDestroy;
+	public GameObject toRespawn;
 	public Transform soul;
 
 	public int times = 0;
@@ -25,12 +26,13 @@ public class ResetPos : MonoBehaviour {
 				Destroy(toDestroy);
 			}
 			times += 1;
+			toRespawn.gameObject.SetActive(true);
 
-			other.transform.position = new Vector3(0f,0.5f,-20f);
+			other.transform.position = new Vector3(0f, 0.5f, -20f);
 			UpdateOffset();
 
 			// Make soul/camera farther apart
-			soul.transform.position = new Vector3(currentOffset+5f,0.5f,-20f);
+			soul.transform.position = new Vector3(currentOffset+5f, 0.5f, -20f);
 		}
 			}
 
