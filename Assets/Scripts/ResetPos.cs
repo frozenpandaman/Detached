@@ -10,9 +10,11 @@ public class ResetPos : MonoBehaviour {
 
 	public int times = 0;
 	private float currentOffset = 0f;
+	//Vector3 pickupStartPos;
 
 	void Start() {
 		UpdateOffset();
+		//pickupStartPos = new Vector3(-15f, 2f, 15f);
 	}
 
 	void UpdateOffset() {
@@ -26,7 +28,8 @@ public class ResetPos : MonoBehaviour {
 				Destroy(toDestroy);
 			}
 			times += 1;
-			toRespawn.gameObject.SetActive(true);
+			//toRespawn.gameObject.SetActive(true);
+			//toRespawn.transform.position = pickupStartPos;
 
 			other.transform.position = new Vector3(0f, 0.5f, -20f);
 			UpdateOffset();

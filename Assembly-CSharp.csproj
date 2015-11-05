@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ResetPos.cs" />
+     <Compile Include="Assets\Scripts\RotatePickup.cs" />
      <Compile Include="Assets\Scripts\SetSeed.cs" />
      <Compile Include="Assets\_Caves\CameraController.cs" />
      <Compile Include="Assets\_Caves\MapGenerator.cs" />

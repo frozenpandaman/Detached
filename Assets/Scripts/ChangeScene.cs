@@ -13,6 +13,6 @@ public class ChangeScene : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
-		Application.LoadLevel (ToLevel);
+		Application.LoadLevel(ToLevel);
 	}
 }
