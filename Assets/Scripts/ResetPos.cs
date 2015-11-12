@@ -5,6 +5,10 @@ public class ResetPos : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject toDestroy;
+	public GameObject toDestroy2;
+	public GameObject toUnhide1;
+	public GameObject toUnhide2;
+	public GameObject toUnhide3;
 	public GameObject toRespawn;
 	public Transform soul;
 
@@ -26,6 +30,10 @@ public class ResetPos : MonoBehaviour {
 			if (times == 2) {
 				Destroy(this.gameObject);
 				Destroy(toDestroy);
+				Destroy(toDestroy2);
+				toUnhide1.gameObject.SetActive(true);
+				toUnhide2.gameObject.SetActive(true);
+				toUnhide3.gameObject.SetActive(true);
 			}
 			times += 1;
 			//toRespawn.gameObject.SetActive(true);
