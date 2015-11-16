@@ -376,7 +376,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_Alignment: 1
@@ -435,7 +435,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 1
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stuffToPlace:
-  - {fileID: 68386130}
+  - {fileID: 788117362}
   - {fileID: 1881590762}
   - {fileID: 100000, guid: 9b6c3d01c33718b45bf7737e8c87415d, type: 3}
   - {fileID: 1124376934}
@@ -673,6 +673,7 @@ MonoBehaviour:
   - {fileID: 358882077}
   - {fileID: 1732317102}
   - {fileID: 285272562}
+  grass: {fileID: 788117362}
   maxNumberOfObjectsToPlace: 30
 --- !u!1 &67902743 stripped
 GameObject:
