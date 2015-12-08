@@ -8,6 +8,7 @@ public class randomplace : MonoBehaviour {
     public GameObject stone;
     private int[,] grid = new int[6, 6];
     Vector3 targetCoords;
+    Vector3 trueCoords;
     public int maxNumberOfObjectsToPlace = 30;
     // Use this for initialization
     void Start () {
@@ -50,18 +51,24 @@ public class randomplace : MonoBehaviour {
             float targetCoordsX = center.x + Random.Range(-moveAreaX * scale, moveAreaX * scale);
             float targetCoordsZ = center.z + Random.Range(-moveAreaZ * scale, moveAreaZ * scale);
             targetCoords = new Vector3(targetCoordsX, 1.0f, targetCoordsZ);
-            Object clone;
-            float changedlength = Random.Range(30f, 70f);
-            wall.transform.localScale += new Vector3(-0.5f, 0, changedlength);
             if (Random.Range(0f,359f)>180f)
             {
-                clone = Instantiate(wall, targetCoords, Quaternion.Euler(0, 90, 0));
+                int numofwalllength = Random.Range(5,15);
+                for (int i =0; i<numofwalllength; ++i)
+                {
+                    trueCoords = new Vector3(targetCoordsX + i * 10, 1.0f, targetCoordsZ);
+                    Instantiate(wall, trueCoords, Quaternion.Euler(0, 90, 0));
+                }
             }
             else
             {
-                clone = Instantiate(wall, targetCoords, Quaternion.Euler(0, 0, 0));
+                int numofwalllength = Random.Range(5, 15);
+                for (int i = 0; i < numofwalllength; ++i)
+                {
+                    trueCoords = new Vector3(targetCoordsX, 1.0f, targetCoordsZ+i*10);
+                    Instantiate(wall, trueCoords, Quaternion.Euler(0, 0, 0));
+                }
             }
-            wall.transform.localScale += new Vector3(0.5f, 0, -changedlength);
             --numofwall;
         }
     }
