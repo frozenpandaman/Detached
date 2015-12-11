@@ -6,7 +6,7 @@ public class randomplace : MonoBehaviour {
     public GameObject wall;
     public GameObject grass;
     public GameObject stone;
-    private int[,] grid = new int[6, 6];
+    //private int[,] grid = new int[6, 6];
     Vector3 targetCoords;
     Vector3 trueCoords;
     public int maxNumberOfObjectsToPlace = 30;
@@ -43,7 +43,7 @@ public class randomplace : MonoBehaviour {
             float targetCoordsZ = center.z + Random.Range(-moveAreaZ * scale, moveAreaZ * scale);
             targetCoords = new Vector3(targetCoordsX,0.2f, targetCoordsZ);
             placeable.transform.position = targetCoords;
-            print(placeable);
+            //print(placeable);
         }
 
         while (numofwall > 0)

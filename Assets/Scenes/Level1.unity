@@ -198,7 +198,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f18494a8737684fd684d3ddcab97debe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -712,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &68386131
 Transform:
   m_ObjectHideFlags: 0
@@ -3926,11 +3926,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1496517701}
-  toDestroy: {fileID: 1579940911}
+  toDestroy: {fileID: 0}
   toDestroy2: {fileID: 0}
-  toUnhide1: {fileID: 2145670881}
-  toUnhide2: {fileID: 270452812}
-  toUnhide3: {fileID: 1217292704}
+  toUnhide1: {fileID: 0}
+  toUnhide2: {fileID: 0}
+  toUnhide3: {fileID: 0}
   toRespawn: {fileID: 1634477718}
   soul: {fileID: 2125243230}
   times: 0
@@ -9697,7 +9697,7 @@ Transform:
   m_GameObject: {fileID: 1579940911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9, y: 1, z: 10}
-  m_LocalScale: {x: 1, y: 12, z: 10}
+  m_LocalScale: {x: 1, y: 6, z: 7.20374489}
   m_Children: []
   m_Father: {fileID: 736205508}
   m_RootOrder: 6
@@ -11081,6 +11081,10 @@ Prefab:
       propertyPath: m_Name
       value: Chest (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b6c3d01c33718b45bf7737e8c87415d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b6c3d01c33718b45bf7737e8c87415d, type: 3}
   m_IsPrefabParent: 0
@@ -11622,7 +11626,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f18494a8737684fd684d3ddcab97debe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -12574,7 +12578,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f18494a8737684fd684d3ddcab97debe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
